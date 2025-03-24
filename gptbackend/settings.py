@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # my apps
     "chat",
     "chatmessages",
+    "api",
     # pip installed apps
     "rest_framework",
     "corsheaders",
