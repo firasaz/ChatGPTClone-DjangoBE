@@ -6,6 +6,10 @@ from .serializers import UserSerializer
 
 
 @api_view(["GET"])
+def handshake(request):
+    return Response("Backend: Handshake successful", status=status.HTTP_200_OK)
+
+@api_view(["GET"])
 def users_list(request):
     users = User.objects.all()
     serializer = UserSerializer(users, many=True)

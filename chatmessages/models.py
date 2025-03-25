@@ -4,7 +4,7 @@ from chat.models import Chat
 
 # Create your models here.
 class Messages(models.Model):
-    chat = models.ForeignKey(Chat, on_delete=models.CASCADE)
+    chat = models.ForeignKey(Chat, on_delete=models.CASCADE, null=True, blank=True)
     message = models.TextField("message text")
     is_message_artificial = models.BooleanField(
         help_text="Is the message a user prompt or AI generated"
